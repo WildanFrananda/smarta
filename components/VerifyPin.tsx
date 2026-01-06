@@ -105,7 +105,7 @@ export default function VerifyPin({ onSuccess, onBack }: VerifyPinProps) {
                 {/* Logo */}
                 <div className="mb-4">
                   <img
-                    src="figma:asset/8fc85a7fc0212f02a874778f40804f17b854b157.png"
+                    src="smarta.png"
                     alt="SMARTA Logo"
                     className="w-auto h-10 object-contain"
                   />
@@ -135,10 +135,10 @@ export default function VerifyPin({ onSuccess, onBack }: VerifyPinProps) {
                     onChange={(e) => handlePinChange(index, e.target.value)}
                     onKeyDown={(e) => handleKeyDown(index, e)}
                     className={`w-12 h-14 text-center text-2xl rounded-xl border-2 ${error
-                        ? 'border-red-400 bg-red-50'
-                        : digit
-                          ? 'border-blue-500 bg-blue-50'
-                          : 'border-gray-300 bg-gray-50'
+                      ? 'border-red-400 bg-red-50'
+                      : digit
+                        ? 'border-blue-500 bg-blue-50'
+                        : 'border-gray-300 bg-gray-50'
                       } focus:border-blue-500 focus:ring-4 focus:ring-blue-400/10 outline-none transition-all`}
                   />
                 ))}

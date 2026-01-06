@@ -46,7 +46,7 @@ export default function LogoutConfirmation({ onConfirm, onCancel }: LogoutConfir
                 {/* SMARTA Logo */}
                 <div className="mb-4">
                   <img
-                    src="figma:asset/8fc85a7fc0212f02a874778f40804f17b854b157.png"
+                    src="smarta.png"
                     alt="SMARTA Logo"
                     className="w-auto h-12 object-contain"
                   />

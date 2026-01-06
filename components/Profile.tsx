@@ -34,8 +34,8 @@ export default function Profile({ onNavigate, onLogout }: ProfileProps) {
               />
             </div>
             <div className="flex-1">
-              <h2 className="text-white mb-1">Budi Santoso</h2>
-              <p className="text-blue-100 text-sm mb-2">budi.santoso@email.com</p>
+              <h2 className="text-white mb-1">Sabrina Nur Amelia</h2>
+              <p className="text-blue-100 text-sm mb-2">sabrina.nur.amelia@email.com</p>
               <div className="flex items-center gap-2">
                 <div className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-lg flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-yellow-300" />
@@ -50,8 +50,12 @@ export default function Profile({ onNavigate, onLogout }: ProfileProps) {
       <div className="px-6 mt-6 space-y-6">
         {/* SMARTA Logo Section */}
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-md border border-white/50 text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-xl shadow-blue-500/30">
-            <Sparkles className="w-8 h-8 text-white" />
+          <div className="w-16 h-16 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-3 overflow-hidden">
+            <ImageWithFallback
+              src="smarta.png"
+              alt="SMARTA Logo"
+              className="w-12 h-12 object-contain"
+            />
           </div>
           <h3 className="text-blue-600 mb-1">SMARTA</h3>
           <p className="text-xs text-gray-500">Smart Transaction Assistant</p>

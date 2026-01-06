@@ -37,7 +37,7 @@ export default function Onboarding({ onStart }: OnboardingProps) {
             {/* Main Logo with Animation */}
             <div className={`relative flex items-center justify-center mb-6 transition-all duration-1000 delay-300 ${logoLoaded ? 'scale-100 rotate-0' : 'scale-50 rotate-12'}`}>
               <img
-                src="figma:asset/8fc85a7fc0212f02a874778f40804f17b854b157.png"
+                src="smarta.png"
                 alt="SMARTA Logo"
                 className="w-auto h-32 md:h-40 object-contain drop-shadow-2xl animate-float"
                 onLoad={() => setLogoLoaded(true)}

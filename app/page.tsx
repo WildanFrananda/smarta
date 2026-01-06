@@ -156,7 +156,7 @@ function DesktopSidebar({ currentScreen, onNavigate, onLogout }: { currentScreen
       <div className="mb-8">
         <div className="flex items-center gap-3">
           <img
-            src="figma:asset/8fc85a7fc0212f02a874778f40804f17b854b157.png"
+            src="smarta.png"
             alt="SMARTA Logo"
             className="w-auto h-12 object-contain"
           />

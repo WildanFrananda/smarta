@@ -24,7 +24,7 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
         <div className="flex justify-between items-start mb-8">
           <div>
             <p className="text-blue-100 text-sm mb-1">Selamat datang kembali,</p>
-            <h2 className="text-white">Budi Santoso</h2>
+            <h2 className="text-white">Sabrina Nur Amelia</h2>
           </div>
           <div className="flex gap-3 md:hidden">
             <button

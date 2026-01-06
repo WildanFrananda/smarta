@@ -60,7 +60,7 @@ export default function LoginRegister({ onLogin, onBack }: LoginRegisterProps) {
                   {/* SMARTA Logo */}
                   <div className="relative">
                     <img
-                      src="figma:asset/8fc85a7fc0212f02a874778f40804f17b854b157.png"
+                      src="smarta.png"
                       alt="SMARTA Logo"
                       className="w-auto h-16 md:h-20 object-contain drop-shadow-2xl"
                     />
