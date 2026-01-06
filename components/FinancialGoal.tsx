@@ -12,7 +12,7 @@ interface Goal {
   target: number;
   current: number;
   deadline: string;
-  icon: unknown;
+  icon: React.ElementType;
   color: string;
 }
 
@@ -172,7 +172,7 @@ export default function FinancialGoal({ onNavigate }: FinancialGoalProps) {
               <div>
                 <h4 className="text-teal-800 mb-1">Rekomendasi Target</h4>
                 <p className="text-sm text-teal-700 leading-relaxed">
-                  Dengan savings rate saat ini (56.7%), Anda bisa mencapai target "Liburan ke Jepang" dalam 2 bulan! Sisihkan Rp 6.25jt/bulan untuk mencapainya tepat waktu. 🎯
+                  Dengan savings rate saat ini (56.7%), Anda bisa mencapai target &quot;Liburan ke Jepang&quot; dalam 2 bulan! Sisihkan Rp 6.25jt/bulan untuk mencapainya tepat waktu. 🎯
                 </p>
               </div>
             </div>
