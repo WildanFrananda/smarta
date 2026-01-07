@@ -27,7 +27,7 @@ export default function Onboarding({ onStart }: OnboardingProps) {
 
       <div className="relative z-10 max-w-md w-full text-center">
         {/* Animated Logo Container */}
-        <div className="mb-12">
+        <div>
           <div className={`relative transition-all duration-1000 ${logoLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'}`}>
             {/* Logo Glow Effect */}
             <div className="absolute inset-0 flex items-center justify-center">
@@ -35,11 +35,11 @@ export default function Onboarding({ onStart }: OnboardingProps) {
             </div>
 
             {/* Main Logo with Animation */}
-            <div className={`relative flex items-center justify-center mb-6 transition-all duration-1000 delay-300 ${logoLoaded ? 'scale-100 rotate-0' : 'scale-50 rotate-12'}`}>
+            <div className={`relative flex items-center justify-center transition-all duration-1000 delay-300 ${logoLoaded ? 'scale-100 rotate-0' : 'scale-50 rotate-12'}`}>
               <img
                 src="smarta.png"
                 alt="SMARTA Logo"
-                className="w-auto h-32 md:h-40 object-contain drop-shadow-2xl animate-float"
+                className="w-auto h-64 md:h-64 object-contain drop-shadow-2xl animate-float"
                 onLoad={() => setLogoLoaded(true)}
               />
             </div>

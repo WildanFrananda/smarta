@@ -153,12 +153,12 @@ function DesktopSidebar({ currentScreen, onNavigate, onLogout }: { currentScreen
   return (
     <div className="flex flex-col h-full p-6">
       {/* Logo */}
-      <div className="mb-8">
+      <div className="mb-10">
         <div className="flex items-center gap-3">
           <img
             src="smarta.png"
             alt="SMARTA Logo"
-            className="w-auto h-12 object-contain"
+            className="w-auto h-50 object-contain"
           />
         </div>
       </div>

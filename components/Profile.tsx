@@ -49,12 +49,12 @@ export default function Profile({ onNavigate, onLogout }: ProfileProps) {
 
       <div className="px-6 mt-6 space-y-6">
         {/* SMARTA Logo Section */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-md border border-white/50 text-center">
-          <div className="w-16 h-16 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-3 overflow-hidden">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-md border border-white/50 text-center">
+          <div className="w-28 h-28 bg-transparent rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
             <ImageWithFallback
               src="smarta.png"
               alt="SMARTA Logo"
-              className="w-12 h-12 object-contain"
+              className="w-24 h-24 object-contain"
             />
           </div>
           <h3 className="text-blue-600 mb-1">SMARTA</h3>
