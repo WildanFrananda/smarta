@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowUpRight, ArrowDownLeft, Send, Wallet, PlusCircle, TrendingUp, TrendingDown, Bell, User, BarChart3, Target, MessageCircle, Building2, Link } from 'lucide-react';
 import { Screen } from '@/app/page';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import TransferModal from './TransferModal';
 
 interface DashboardProps {
   onNavigate: (screen: Screen) => void;
@@ -17,6 +18,8 @@ const chartData = [
 ];
 
 export default function Dashboard({ onNavigate }: DashboardProps) {
+  const [isTransferOpen, setIsTransferOpen] = useState(false);
+
   return (
     <div className="min-h-screen pb-24">
       {/* Header */}
@@ -75,7 +78,10 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
         <div>
           <h3 className="text-gray-800 mb-4">Quick Actions</h3>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
-            <button className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-white/50 hover:shadow-lg transition-all active:scale-95">
+            <button
+              onClick={() => setIsTransferOpen(true)}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-white/50 hover:shadow-lg transition-all active:scale-95"
+            >
               <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <Send className="w-6 h-6 text-white" />
               </div>
@@ -191,6 +197,9 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
           </button>
         </div>
       </div>
+
+      {/* Transfer Modal */}
+      <TransferModal open={isTransferOpen} onOpenChange={setIsTransferOpen} />
     </div>
   );
 }
