@@ -3,6 +3,7 @@ import { ArrowUpRight, ArrowDownLeft, Send, Wallet, PlusCircle, TrendingUp, Tren
 import { Screen } from '@/app/page';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import TransferModal from './TransferModal';
+import QRISModal from './QRISModal';
 
 interface DashboardProps {
   onNavigate: (screen: Screen) => void;
@@ -19,6 +20,7 @@ const chartData = [
 
 export default function Dashboard({ onNavigate }: DashboardProps) {
   const [isTransferOpen, setIsTransferOpen] = useState(false);
+  const [isQRISOpen, setIsQRISOpen] = useState(false);
 
   return (
     <div className="min-h-screen pb-24">
@@ -87,7 +89,10 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
               </div>
               <p className="text-xs text-gray-700">Transfer</p>
             </button>
-            <button className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-white/50 hover:shadow-lg transition-all active:scale-95">
+            <button
+              onClick={() => setIsQRISOpen(true)}
+              className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border border-white/50 hover:shadow-lg transition-all active:scale-95"
+            >
               <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <Wallet className="w-6 h-6 text-white" />
               </div>
@@ -200,6 +205,9 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
 
       {/* Transfer Modal */}
       <TransferModal open={isTransferOpen} onOpenChange={setIsTransferOpen} />
+
+      {/* QRIS Modal */}
+      <QRISModal open={isQRISOpen} onOpenChange={setIsQRISOpen} />
     </div>
   );
 }

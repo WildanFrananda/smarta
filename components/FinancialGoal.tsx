@@ -130,8 +130,8 @@ export default function FinancialGoal({ onNavigate }: FinancialGoalProps) {
                   />
                   <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" className={`${healthScore >= 80 ? 'stop-color-green-400' : healthScore >= 60 ? 'stop-color-blue-400' : 'stop-color-orange-400'}`} />
-                      <stop offset="100%" className={`${healthScore >= 80 ? 'stop-color-green-600' : healthScore >= 60 ? 'stop-color-blue-600' : 'stop-color-orange-600'}`} />
+                      <stop offset="0%" stopColor="#14b8a6" />
+                      <stop offset="100%" stopColor="#14b8a6" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -142,7 +142,7 @@ export default function FinancialGoal({ onNavigate }: FinancialGoalProps) {
               </div>
 
               <div className={`px-4 py-2 rounded-xl bg-gradient-to-r ${getScoreGradient(healthScore)} bg-opacity-10`}>
-                <span className={`${getScoreColor(healthScore)}`}>{getScoreLabel(healthScore)}</span>
+                <span className="text-sm text-white">{getScoreLabel(healthScore)}</span>
               </div>
             </div>
 
